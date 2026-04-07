@@ -21,12 +21,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseAppId = process.env.NEXT_PUBLIC_BASE_APP_ID ?? "";
+const baseAppId =
+  process.env.NEXT_PUBLIC_BASE_APP_ID ?? "69d4b14f91c13596e8962105";
 
 export const metadata: Metadata = {
   title: "Neon Honk Heist",
   description: "Cyberpunk stealth grid game on Base — swipe to move, clear sectors, daily check-in.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      "https://untitled-goose-game-six.vercel.app",
+  ),
 };
 
 export default function RootLayout({

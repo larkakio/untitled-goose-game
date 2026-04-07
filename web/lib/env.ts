@@ -6,7 +6,10 @@ export function getTargetChainId(): number {
 }
 
 export function getSiteUrl(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  return (
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://untitled-goose-game-six.vercel.app"
+  );
 }
 
 export function getCheckInAddress(): `0x${string}` | undefined {

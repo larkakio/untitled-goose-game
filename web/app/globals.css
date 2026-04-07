@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070714;
+  --foreground: #e8e8f0;
+  --neon-cyan: #00f5ff;
+  --neon-magenta: #ff00e5;
+  --neon-lime: #b8ff00;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background: radial-gradient(ellipse 120% 80% at 50% -20%, #1a0a2e 0%, var(--background) 45%);
+  color: var(--foreground);
+  min-height: 100dvh;
+}
+
+.neon-panel {
+  background: linear-gradient(145deg, rgba(20, 20, 40, 0.95), rgba(8, 8, 20, 0.98));
+  border: 1px solid rgba(0, 245, 255, 0.25);
+  box-shadow:
+    0 0 20px rgba(0, 245, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.neon-button {
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.25), rgba(255, 0, 229, 0.2));
+  border: 1px solid rgba(0, 245, 255, 0.45);
+  color: #f0fdff;
+  text-shadow: 0 0 12px rgba(0, 245, 255, 0.5);
+  box-shadow: 0 0 16px rgba(0, 245, 255, 0.15);
+}
+
+.neon-button:hover {
+  border-color: rgba(0, 245, 255, 0.8);
+  box-shadow: 0 0 24px rgba(0, 245, 255, 0.25);
+}
+
+.neon-button:disabled {
+  text-shadow: none;
+  box-shadow: none;
+}
+
+@keyframes neon-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2.2s ease-in-out infinite;
+}
